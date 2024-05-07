@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 2 Front end</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="assets/js/javascript1.js"></script>
+</head>
+<body id="cambiar_color">
+    <header>
+        <div class="contenedorboton">
+            <h1> Mi perfil de <span class="valorant">VALORANTa</span> </h1>
+            <button onclick="clickeame()" class="contraste">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </div>
+    </header>
+    <div id="seccion1">
+        <section>
+            <header class="mi-perfil">
+                <h2>Bienvenido a mi perfil</h2>
+            </header>
+            <div class="menuHorizontal">
+                <ul>
+                    <li class="s1"><a href="#seccion1"><button class="b1" type="button">Pagina principal</button></a></li>
+                    <li class="s2"><a href="#seccion2"><button class="b2" type="button">Informacion</button></a></li>
+                    <li class="s3"><a href="#seccion3"><button class="b3" type="button">Imagenes</button></a></li>
+                    <li class="s4"><a href="#seccion4"><button class="b4" type="button">Video</button></a></li>
+                    <li class="s5"><a href="#seccion5"><button class="b5" type="button">Formulario</button></a></li>
+                </ul>
+            </div>
+            <div class="contenedorimagen">
+                <div>
+                    <img src="assets/images/valorant logo.png" class="logo-valo"/>
+                    <div class="contenedorLogo">
+                        <!-- <img src="assets/images/-41603132643cu4w2suo6q.png" alt=""> -->
+                    </div> 
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <div id="seccion2">
+        <section class="informacion">
+            <h2 class="titulos">Informacion</h2>
+            <p>
+                Hola, soy un jugador de VALORANT, llevo jugando desde la beta del juego que se muestra más abajo, he practicado bastante con herramientas de entrenamiento de aim como "aimlab" y aprovechado al máximo el juego por más de 700 horas. adjunto mi valorant tracker para más información y mis redes sociales:
+                <div class="contenedorsociales">
+                    <div class="contenedortracker">
+                        <a href="https://tracker.gg/valorant/profile/riot/Hwarang%2300012/overview" target="_blank" class="logotracker"><img class="vtracker"src="assets/images/79d1b4970570ba2f23968c8bf1105048eda501b2.webp" alt=""></a>
+                    </div>
+                    <div class="contenedorinstagram">
+                        <a href="https://instagram.com/twelve.variance" target="_blank" class="tracker"><img class="logoinsta"src="assets/images/social.png" alt=""></a> 
+                    </div>
+                    <div class="contenedortwitch">
+                        <a href="https://www.twitch.tv/oh_twelve" target="_blank" class="tracker"><img class="logotwitch" src="assets/images/twitch.png" alt=""></a>
+                    </div>
+                </div>
+                 Como se puede ver ahí, actualmente soy ascendente. He participado también en torneos de "Free agent" o "Agente libre" que son torneos diseñados para jugadores que no disponen de un equipo prediseñado de 5 personas. Por lo que puedo decir que tengo bastante experiencia en el juego.
+            </p>
+        </section>
+    </div>
+    <div id="seccion3">
+        <section>
+            <h2 class="titulos">
+                Personajes mas utilizados
+            </h2>
+            <div class="flex-container">
+                <div>
+                    <div class="personajes">
+                        <h1>Gekko</h1>
+                    </div>
+                    <img src="assets/images/Gekko.jpg" class="galeria">
+                    <p class="descripciones">Gekko, de Los Ángeles, lidera una pequeña pandilla de calamitosas criaturas. Sus colegas toman la delantera para dispersar a los enemigos, mientras que Gekko los persigue para luego reagruparse y repetir el proceso.</p>
+                </div>
+                <div>
+                    <div class="personajes">
+                        <h1>Cypher</h1>
+                    </div>
+                    <img src="assets/images/Cypher.jpg" class="galeria">
+                    <p class="descripciones">Cypher es un experto en información de Marruecos que se especializa en redes de vigilancia y es capaz de seguirle la pista al enemigo constantemente. No hay secreto a salvo ni maniobra que pase desapercibida. Cypher siempre está alerta.</p>
+                </div>
+                <div>
+                    <div class="personajes">
+                        <h1>Chamber</h1>
+                    </div>
+                    <img src="assets/images/Chamber.jpg" class="galeria">
+                    <p class="descripciones">Chamber, centinela de Francia El diseñador de armas francés, siempre bien vestido y bien pertrechado, expulsa a los agresores con precisión letal. Chamber aprovecha su arsenal personalizado para resistir, elimina enemigos a distancia y crea la contingencia perfecta para cada plan.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="seccion4">
+        <section>
+            <h2 class="titulos"> Video referencial</h2>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/Ey770ez6ROk" title="Bienvenidos a VALORANT - Desafía los límites" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </div>
+    <div id="seccion5">
+        <section>
+            <form>
+                <fieldset>
+                    <div class="tituloformulario">
+                        <h3>¡ Dejame invitarte una partida !</h3>
+                    </div>
+                    <label class="riotid">
+                        Identificador de Riotgames
+                    </label>
+                    <input type="text" id="riotid" placeholder="JohnDoe#99035"/>
+                    <p class="noDisplay" id="priotid">Debes ingresar un id</p>
+                    <label class="telefono">
+                        Número telefónico
+                    </label>
+                    <input type="tel" id="telefono" placeholder="+56982320154"/>
+                    <p class="noDisplay" id="ptelefono">Debes ingresar un teléfono válido</p>
+                    <label class="instagram">
+                        Instagram
+                    </label>
+                    <input type="text" id="instagram" placeholder="@john.doe"/>
+                    <p class="noDisplay" id="pinstagram">Debes ingresar un email</p>
+                    <label class="rangodejuego">
+                        Rango
+                    </label>
+                    <select id="rango" name="rangos">
+                        <option value="1">Bronce</option>
+                        <option value="2">Plata</option>
+                        <option value="3">Oro</option>
+                        <option value="4">Platino</option>
+                        <option value="5">Diamante</option>
+                        <option value="6">Ascendente</option>
+                        <option value="7">Inmortal</option>
+                        <option value="8">Radiante</option>
+                    </select>
+                    <button id="enviar" type="button" onclick="validar()">Enviar</button>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
