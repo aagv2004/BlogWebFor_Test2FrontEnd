@@ -1,13 +1,13 @@
 function clickeame(){
-    let fondo = document.getElementById("cambiar_color");
-    if (fondo.style.backgroundColor ==="black" && fondo.style.color ==="white"){
-    fondo.style.backgroundColor = "";
-    fondo.style.color = "";
+    let body = document.body;
+    if (body.style.backgroundColor === "black") {
+        body.style.backgroundColor = "white"
+        body.style.color = "black"
     } else {
-        fondo.style.backgroundColor = "white";
-        fondo.style.color = "black";
+        body.style.backgroundColor = "black"
+        body.style.color = "white"
     }
-}
+    }
 
 function validar(){
     validarVacio("riotid");
