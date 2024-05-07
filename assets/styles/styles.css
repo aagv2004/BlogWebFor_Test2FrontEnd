@@ -4,7 +4,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .contraste {
-    display:flex;
+    display: flex;
     padding: 10px 20px;
     margin-left: 100px;
     /* background-color: #0074D9; */
@@ -12,11 +12,6 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-}
-.icon {
-    width: 9999999999px;
-    font-size: 24px;
-    margin-right: 10px;
 }
 .contenedorboton {
     display: flex;
@@ -122,9 +117,6 @@ fieldset {
 .valorant {
     color: red;
 }
-.contenedorLogo{
-    display:flex;
-}
 img.otrologo {
     display:flex;
     padding: auto;
@@ -138,8 +130,17 @@ img.otrologo {
     /* flex: 50%; */
     align-items: center;
 }
+div.titulovalorant {
+    display:block;
+    margin-top: 60%;
+    margin-left: -40%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: xx-large;
+}
 img.logo-valo {
     margin-top: 200px;
+    margin-left: -10%;
     width: 50%;
 }
 img.galeria {
@@ -194,7 +195,6 @@ p.noDisplay {
 }
 .titulos, h1, h2 {
     text-align: center;
-    text-decoration: red 1px;
     font-family: "valorant";
 }
 .contenedorsociales {
@@ -205,47 +205,22 @@ p.noDisplay {
     /* padding: 5px; */
     width: 100%;
 }
-.contenedortracker, .contenedorinstagram, .contenedortwitch {
-    width:100%;
-    margin: auto;
-    margin-left: 10px;
-    /* border: 1px blue solid; */
-    align-items: center;
-}
-.contenedortracker {
-    width: 16.5%;
-    height: 130px;
-    margin-left: 145px;
-}
-.contenedorinstagram{
-    width: 16.5%;
-    height: 130px;
-    margin: 10px;
-    margin-left: 30px;
-}
-.contenedortwitch {
-    width: 16.50%;
-    height: 130px;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 50px;
-}
-.contenedortracker:hover {
+.imgtracker:hover {
     border: 2px solid red;
     border-radius: 3px;
 }
-.contenedorinstagram:hover {
+.logoinsta:hover {
     border: 2px solid skyblue;
     border-radius: 3px;
 }
-.contenedortwitch:hover {
+.logotwitch:hover {
     border: 2px solid #800050;
     border-radius: 18px;
 }
 
 .logotracker {
-    width: 100%;
-    /* height: 283px; */
+    width: 50%;
+    height: 100px;
 }
 .imgtracker{
     width: 100%;
