@@ -6,7 +6,7 @@ body {
 .contraste {
     display: flex;
     padding: 10px 20px;
-    margin-left: 100px;
+    margin-left: 0px;
     /* background-color: #0074D9; */
     /* color: white; */
     border: none;
@@ -65,17 +65,23 @@ ul {
     cursor: pointer;
 }
 
-/* .tracker {
+/* .anchor {
+    width: auto;
+    place-content: center;
+    align-items: center;
+} */
+.anchor {
     display: flex;
     text-align: center;
-    width: 100%;
+    place-content: center;
+    width: 40%;
 }
-.tracker:hover {
-    width: 100%;
+.anchor:hover {
+    /* width: 100%; */
     background-image: none;
     border: 1.5px solid red;
     color: red;
-} */
+}
 div#seccion1, div#seccion2, div#seccion3, div#seccion4 {
     border: 1px solid red;
     padding: 1%;
@@ -88,7 +94,7 @@ div#seccion1 {
 
 label {
     display:block;
-    margin: 0.3%;
+    margin: 10px;
     margin-left: 1%;
     width: auto;
 }
@@ -176,14 +182,14 @@ div#seccion4 > p {
     padding: 5px;
 }
 
-button#enviar {
+button#btnValidar {
     display:block;
     margin: 1%;
     text-align: center;
     margin-left: 35.5%;
-    background-color: red;
-    border-radius: 25%;
-    color: white;
+    /* background-color: red; */
+    /* border-radius: 25%; */
+    /* color: white; */
     width: 30%;
 }
 p.noDisplay {
@@ -224,14 +230,17 @@ p.noDisplay {
 }
 .imgtracker{
     width: 100%;
+    /* margin-left: 30%; */
     /* height: 283.7px; */
 }
 .logoinsta{
     width: 100%;
+    /* margin-left: 30%; */
     /* height: 100%; */
 }
 .logotwitch {
     width: 100%;
+    /* margin-left: 30%; */
     /* height: 100%; */
 }
 .descripciones {
@@ -243,3 +252,15 @@ p.noDisplay {
     margin: 0;
     padding: 0;
 } */
+
+div.contenedorrangos {
+    display:flex;
+    padding: auto;
+    margin: auto;
+    width: auto;
+}
+
+select {
+    text-align: center;
+    margin-left: 35%;
+}

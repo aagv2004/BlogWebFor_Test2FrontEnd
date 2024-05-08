@@ -1,12 +1,50 @@
-function clickeame(){
-    let body = document.body;
-    if (body.style.backgroundColor === "black") {
-        body.style.backgroundColor = "white"
-        body.style.color = "black"
+window.addEventListener("load", () => {
+    document.getElementById("btnValidar").addEventListener("click", validar);
+    document.getElementById("btnContraste").addEventListener("click", contraste);
+})
+
+function contraste(){
+    let eBody = document.body;
+    let colorBody = eBody.style.backgroundColor;
+    let eH1 = document.getElementsByClassName("textoH1"); //esto tiene elementos
+    let eInputs = document.getElementsByTagName("input");
+    let eTextAreas = document.getElementsByTagName("textarea");
+    console.log(eInputs);
+    console.log(eInputs[1]);
+    console.log(...eInputs,...eTextAreas)
+    if (colorBody === "black") {
+        eBody.style.backgroundColor = "white";
+        for (let index = 0; index < eH1.length; index++) {
+            const element = eH1[index];
+            element.style.color="black";
+        }
+        for (let index = 0; index < eInputs.length; index++) {
+            const element = eInputs[index];
+            element.style.borderColor="black"
+        }
+        for (let index = 0; index < eTextAreas.length; index++) {
+            const element = eTextAreas[index];
+            element.style.borderColor="black"
+        }
+        // eH1.style.color ="black"
     } else {
-        body.style.backgroundColor = "black"
-        body.style.color = "white"
+        eBody.style.backgroundColor = "black";
+        for (let index = 0; index < eH1.length; index++) {
+            const element = eH1[index];
+            element.style.color="white";
+        }
+        for (let index = 0; index < eInputs.length; index++) {
+            const element = eInputs[index];
+            element.style.borderColor="white"
+        }
+        for (let index = 0; index < eTextAreas.length; index++) {
+            const element = eTextAreas[index];
+            element.style.borderColor="white"
+        }
+        // eH1.style.color="white"
     }
+
+
     }
 
 function validar(){

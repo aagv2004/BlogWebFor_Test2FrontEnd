@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="assets/js/javascript1.js"></script>
 </head>
-<body id="cambiar_color">
+<body>
     <header>
         <div class="contenedorboton">
-            <h1> Mi perfil de <span class="valorant">VALORANT</span> </h1>
-            <button onclick="clickeame()" class="contraste">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+            <h1 class="textoH1"> Mi perfil de <span class="valorant">VALORANT</span> </h1>
+            <button class="contraste" id="btnContraste">
+                <i class="fa-solid fa-circle-half-stroke">Contraste</i>
             </button>
+            <button class="contraste" id="btnFuente">Fuente</button>
         </div>
     </header>
-    <div id="seccion1">
+    <div id="seccion1" class="textoH1">
         <section>
             <header class="mi-perfil">
                 <h2>¡ Bienvenido !</h2>
@@ -35,28 +36,28 @@
                 <div>
                     <img src="assets/images/valorant logo.png" class="logo-valo"/>
                     <div class="titulovalorant">
-                        <h1>VALORANT</h1>
+                        <h1 class="textoH1">VALORANT</h1>
                     </div>
                 </div>
             </div>
 
         </section>
     </div>
-    <div id="seccion2">
+    <div id="seccion2" class="textoH1">
         <section class="informacion">
             <h2 class="titulos">Informacion</h2>
             <p>
                 Hola, soy un jugador de VALORANT, llevo jugando desde la beta del juego que se muestra más abajo, he practicado bastante con herramientas de entrenamiento de aim como "aimlab" y aprovechado al máximo el juego por más de 700 horas. adjunto mi valorant tracker para más información y mis redes sociales:
                 <div class="contenedorsociales">
-                            <a href="https://tracker.gg/valorant/profile/riot/Hwarang%2300012/overview" target="_blank" class="tracker"><img class="imgtracker"src="assets/images/79d1b4970570ba2f23968c8bf1105048eda501b2.webp" alt=""></a>
-                            <a href="https://instagram.com/twelve.variance" target="_blank" class="tracker"><img class="logoinsta"src="assets/images/social.png" alt=""></a>
-                            <a href="https://www.twitch.tv/oh_twelve" target="_blank" class="tracker"><img class="logotwitch" src="assets/images/twitch.png" alt=""></a>
+                            <a href="https://tracker.gg/valorant/profile/riot/Hwarang%2300012/overview" target="_blank" class="anchor"><img class="imgtracker"src="assets/images/Valorant Tracker.png" alt=""></a>
+                            <a href="https://instagram.com/twelve.variance" target="_blank" class="anchor"><img class="logoinsta"src="assets/images/social.png" alt=""></a>
+                            <a href="https://www.twitch.tv/oh_twelve" target="_blank" class="anchor"><img class="logotwitch" src="assets/images/twitch.png" alt=""></a>
                 </div>
                  Como se puede ver ahí, actualmente soy ascendente. He participado también en torneos de "Free agent" o "Agente libre" que son torneos diseñados para jugadores que no disponen de un equipo prediseñado de 5 personas. Por lo que puedo decir que tengo bastante experiencia en el juego.
             </p>
         </section>
     </div>
-    <div id="seccion3">
+    <div id="seccion3" class="textoH1">
         <section>
             <h2 class="titulos">
                 Personajes mas utilizados
@@ -86,13 +87,13 @@
             </div>
         </section>
     </div>
-    <div id="seccion4">
+    <div id="seccion4" class="textoH1">
         <section>
             <h2 class="titulos"> Video referencial</h2>
             <iframe width="100%" height="500" src="https://www.youtube.com/embed/Ey770ez6ROk" title="Bienvenidos a VALORANT - Desafía los límites" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
     </div>
-    <div id="seccion5">
+    <div id="seccion5" class="textoH1">
         <section>
             <form>
                 <fieldset>
@@ -117,17 +118,21 @@
                     <label class="rangodejuego">
                         Rango
                     </label>
-                    <select id="rango" name="rangos">
-                        <option value="1">Bronce</option>
-                        <option value="2">Plata</option>
-                        <option value="3">Oro</option>
-                        <option value="4">Platino</option>
-                        <option value="5">Diamante</option>
-                        <option value="6">Ascendente</option>
-                        <option value="7">Inmortal</option>
-                        <option value="8">Radiante</option>
+                    <div class="contenedorrangos">
+                        <select id="rango" name="rangos">
+                            <option value="1">Bronce</option>
+                            <option value="2">Plata</option>
+                            <option value="3">Oro</option>
+                            <option value="4">Platino</option>
+                            <option value="5">Diamante</option>
+                            <option value="6">Ascendente</option>
+                            <option value="7">Inmortal</option>
+                            <option value="8">Radiante</option>
                     </select>
-                    <button id="enviar" type="button" onclick="validar()">Enviar</button>
+                    </div>
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
+                    <button id="btnValidar" type="button">Enviar</button>
                 </fieldset>
             </form>
         </section>
