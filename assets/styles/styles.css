@@ -1,7 +1,13 @@
 body {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.bodyColor {
+    background-color: white;
+    color: black;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 .contraste {
     display: flex;
@@ -33,13 +39,19 @@ header.mi-perfil {
     text-shadow: 100%;
 }
 
-div.menuHorizontal {
+div#menuHorizontal {
     width: 100%;
     padding:auto;
     margin-top: 35px;
     /* margin-right: 600px; */
     display:flex;
 }
+
+.colorMenu {
+    background-color: white;
+    color: black;
+}
+
 ul {
     text-align: center;
     align-items: center;
@@ -47,7 +59,9 @@ ul {
     margin: auto;
     padding: auto;
     width: 85%;
+    /* background-color: white; */
 }
+
 .s1, .s2, .s3, .s4, .s5{
     margin: 6px;
     width: 200px;
@@ -65,6 +79,11 @@ ul {
     cursor: pointer;
 }
 
+.pPrincipal, .pInformacion, .pImagenes, .pVideo, .pFormulario {
+    background-color: white;
+    border: 1px solid red;
+    color: black;
+}
 /* .anchor {
     width: auto;
     place-content: center;
@@ -98,6 +117,12 @@ label {
     margin-left: 1%;
     width: auto;
 }
+
+.inputColor {
+    border: 1px solid #39c;
+    border-radius: 5px;
+}
+
 
 input#riotid, input#telefono, select, input#instagram {
     /* padding: 0.5%; */
@@ -182,16 +207,29 @@ div#seccion4 > p {
     padding: 5px;
 }
 
+
 button#btnValidar {
     display:block;
     margin: 1%;
+    padding: 0;
     text-align: center;
     margin-left: 35.5%;
-    /* background-color: red; */
-    /* border-radius: 25%; */
-    /* color: white; */
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     width: 30%;
+    height: 30px;
+    /* background-color: black; */
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    /* color: white; */
 }
+
+.colorEnviar {
+    color: dimgray;
+    border: 1px solid black;
+}
+
+
 p.noDisplay {
     display: none;
 }
@@ -199,10 +237,11 @@ p.noDisplay {
     font-family: valorant;
     src: url(../fonts/ValorantFont.ttf)
 }
-.titulos, h1, h2 {
+.titulos, h1, h2{
     text-align: center;
     font-family: "valorant";
 }
+
 .contenedorsociales {
     /* border: 1px red solid; */
     display: flex;
@@ -263,4 +302,46 @@ div.contenedorrangos {
 select {
     text-align: center;
     margin-left: 35%;
+}
+
+textarea {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    text-align: justify;
+}
+
+.textareaColor {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: justify;
+}
+
+.colorRango {
+    border: 1px solid antiquewhite;
+    border-radius: 4px;
+    background-color: beige;
+    color: dimgray;
+}
+
+/* Secciones responsivas */
+@media only screen and (height: 600px) {
+    #seccion1 {
+        width: 100%;
+    }
+    header.mi-perfil {
+        text-align: center;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+    div.menuHorizontal {
+        width: 100%;
+        margin-top: 35px;
+        display: flex;
+        
+    }
 }

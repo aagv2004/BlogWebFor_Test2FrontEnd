@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="assets/js/javascript1.js"></script>
 </head>
-<body>
-    <header>
+<body id="cuerpo">
+    <header id="cabecera">
         <div class="contenedorboton">
             <h1 class="textoH1"> Mi perfil de <span class="valorant">VALORANT</span> </h1>
             <button class="contraste" id="btnContraste">
@@ -23,13 +23,13 @@
             <header class="mi-perfil">
                 <h2>¡ Bienvenido !</h2>
             </header>
-            <div class="menuHorizontal">
+            <div id="menuHorizontal">
                 <ul>
-                    <li class="s1"><a href="#seccion1"><button class="b1" type="button">Pagina principal</button></a></li>
-                    <li class="s2"><a href="#seccion2"><button class="b2" type="button">Informacion</button></a></li>
-                    <li class="s3"><a href="#seccion3"><button class="b3" type="button">Imagenes</button></a></li>
-                    <li class="s4"><a href="#seccion4"><button class="b4" type="button">Video</button></a></li>
-                    <li class="s5"><a href="#seccion5"><button class="b5" type="button">Formulario</button></a></li>
+                    <li class="s1"><a href="#seccion1"><button id="principal" class="b1" type="button">Pagina principal</button></a></li>
+                    <li class="s2"><a href="#seccion2"><button id="informacion" class="b2" type="button">Informacion</button></a></li>
+                    <li class="s3"><a href="#seccion3"><button id="imagenes" class="b3" type="button">Imagenes</button></a></li>
+                    <li class="s4"><a href="#seccion4"><button id="video" class="b4" type="button">Video</button></a></li>
+                    <li class="s5"><a href="#seccion5"><button id="formulario" class="b5" type="button">Formulario</button></a></li>
                 </ul>
             </div>
             <div class="contenedorimagen">
@@ -100,21 +100,21 @@
                     <div class="tituloformulario">
                         <h3>¡ Dejame invitarte una partida !</h3>
                     </div>
-                    <label class="riotid">
+                        <label class="riotid">
                         Identificador de Riotgames
-                    </label>
-                    <input type="text" id="riotid" placeholder="JohnDoe#99035"/>
-                    <p class="noDisplay" id="priotid">Debes ingresar un id</p>
-                    <label class="telefono">
-                        Número telefónico
-                    </label>
-                    <input type="tel" id="telefono" placeholder="+56982320154"/>
-                    <p class="noDisplay" id="ptelefono">Debes ingresar un teléfono válido</p>
-                    <label class="instagram">
-                        Instagram
-                    </label>
-                    <input type="text" id="instagram" placeholder="@john.doe"/>
-                    <p class="noDisplay" id="pinstagram">Debes ingresar un email</p>
+                        </label>
+                        <input type="text" id="riotid" placeholder="JohnDoe#99035"/>
+                        <p class="noDisplay" id="priotid">Debes ingresar un id</p>
+                        <label class="telefono">
+                            Número telefónico
+                        </label>
+                        <input type="tel" id="telefono" placeholder="+56982320154"/>
+                        <p class="noDisplay" id="ptelefono">Debes ingresar un teléfono válido</p>
+                        <label class="instagram">
+                            Instagram
+                        </label>
+                        <input type="text" id="instagram" placeholder="@john.doe"/>
+                        <p class="noDisplay" id="pinstagram">Debes ingresar un email</p>
                     <label class="rangodejuego">
                         Rango
                     </label>
@@ -131,7 +131,7 @@
                     </select>
                     </div>
                     <label>Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
+                    <textarea name="mensajes" id="mensaje" cols="50" rows="10"></textarea>
                     <button id="btnValidar" type="button">Enviar</button>
                 </fieldset>
             </form>
