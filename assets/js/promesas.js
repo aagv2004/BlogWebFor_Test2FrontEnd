@@ -1,6 +1,13 @@
-import { addDoc, collection, getDocs, updateDoc, deleteDoc, doc} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-import { db } from "./firebase";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { db } from "./firebase.js";
 
-export const registrarPersona = async(info) => {
-    const docRef = await addDoc(collection(db, 'informacion'), info);
+export const registrarInfo = async(info) => {
+    console.log(info);
+    // console.log(db)
+    // const ref = collection(db,"cities");
+    // console.log(typeof ref)
+    const docRef = await addDoc(collection(db, "cities"), {
+        name: "Tokyo",
+        country: "Japan"
+      });
 }

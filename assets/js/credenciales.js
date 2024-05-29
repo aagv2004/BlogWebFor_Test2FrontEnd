@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-    apiKey: "AIzaSyBLAV0payBtkdKZyLFGFogrQFe0GCHeD50",
-    authDomain: "pagina-valorant.firebaseapp.com",
-    projectId: "pagina-valorant",
-    storageBucket: "pagina-valorant.appspot.com",
-    messagingSenderId: "335572815537",
-    appId: "1:335572815537:web:87e3eb355c87e5d0709c90"
-  };
+  apiKey: "AIzaSyC2svlc6yGhlWvrRCwPvL1QMX9H9Bzx9uM",
+  authDomain: "valorantpage-e5991.firebaseapp.com",
+  projectId: "valorantpage-e5991",
+  storageBucket: "valorantpage-e5991.appspot.com",
+  messagingSenderId: "12805995512",
+  appId: "1:12805995512:web:0d619e843708c07a25b40d"
+};
