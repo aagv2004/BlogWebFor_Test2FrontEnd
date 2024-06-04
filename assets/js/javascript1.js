@@ -1,11 +1,11 @@
-import { registrarInfo } from "./promesas.js"
+import { registrarInfo, obtenerInfo } from "./promesas.js"
 
 window.addEventListener("load", () => {
     document.getElementById("btnValidar").addEventListener("click", validar);
     // document.getElementById("btnContraste").addEventListener("click", contraste);
     document.getElementById("btnContraste").addEventListener("click", activateClass);
     document.getElementById("btnValidar").addEventListener("click", registrar);
-
+    mostrar();
 })
 
 const registrar = ()=> {
@@ -29,14 +29,36 @@ const registrar = ()=> {
         mensaje: vMensaje
     }
     registrarInfo(objeto).then(()=>{
-        alert("Información guardada exitosamente")
-        limpiar_formulario()
+        alert("Información guardada exitosamente");
+        limpiar_formulario();
+        mostrar();
     }).catch((e)=>{
         console.log(e)
     })
 
 
 }
+
+const mostrar = () => {
+    obtenerInfo().then((info)=> {
+        let estructura = "";
+        console.log(info);
+        info.forEach((p)=>{
+            estructura += "</tr>";
+            estructura += "<td>"+p.riotid+"</td>"; 
+            estructura += "<td>"+p.telefono+"</td>";
+            estructura += "<td>"+p.instagram+"</td>";
+            estructura += "<td>"+p.rango+"</td>";
+            estructura += "<td>"+p.mensaje+"</td>";
+            estructura += "<td><button id='UPD"+p.id+"'>Actualizar</button></td>";
+            estructura += "<td><button id='DEL"+p.id+"'>Eliminar</button></td>";
+            estructura += "</tr>";
+        });
+        document.getElementById("botabla").innerHTML = estructura;
+    });
+}
+
+
 
 const limpiar_formulario= () => {
     let eRiotid = document.getElementById("riotid");

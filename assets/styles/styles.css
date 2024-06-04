@@ -345,3 +345,22 @@ textarea {
         
     }
 }
+
+table {
+    padding: 0;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.tabladatos th, .tabladatos td {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: left;
+    color: #fff;
+}
+
+.tabladatos th {
+    background-color: #f2f2f2;
+    color: #000;
+}
