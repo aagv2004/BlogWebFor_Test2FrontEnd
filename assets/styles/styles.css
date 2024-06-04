@@ -329,7 +329,7 @@ textarea {
 
 /* Secciones responsivas */
 @media only screen and (height: 600px) {
-    #seccion1 {
+    #seccion1, #seccion2, #seccion3, #seccion4, #seccion5 {
         width: 100%;
     }
     header.mi-perfil {
@@ -364,3 +364,4 @@ table {
     background-color: #f2f2f2;
     color: #000;
 }
+

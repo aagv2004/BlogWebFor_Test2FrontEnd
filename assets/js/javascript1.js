@@ -58,6 +58,16 @@ const mostrar = () => {
     });
 }
 
+const actualizar = () => {
+    let eRiotid = document.getElementById("UPDriotid");
+    let eTelefono = document.getElementById("UPDtelefono");
+    let eInstagram = document.getElementById("UPDinstagram");
+    let eRango = document.getElementById("UPDrango");
+    let eMensaje = document.getElementById("UPDmensaje");
+}
+
+
+
 
 
 const limpiar_formulario= () => {

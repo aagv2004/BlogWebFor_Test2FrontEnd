@@ -19,3 +19,9 @@ export const obtenerInfo = async() =>{
   });
   return info
 }
+
+export const actualizarInfo = async(info, id) => {
+  const ref = doc(db, "informacion", id);
+  await updateDoc(ref, info);
+}
+
