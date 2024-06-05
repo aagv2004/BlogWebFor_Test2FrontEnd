@@ -365,3 +365,31 @@ table {
     color: #000;
 }
 
+.actualizarDatos select, .eliminarDatos select {
+    width: 14%;
+    margin: 0;
+}
+
+.datos {
+    margin:auto;
+}
+
+#UPDmensaje, #DELmensaje {
+    display: block;
+    position: relative;
+    left: 180px;
+    bottom: 0;
+    top: 5px;
+    right: 0px;
+}
+
+#btnActualizar, #btnEliminar {
+    width: 25%;
+    height: 25px;
+    text-align: center;
+    position: relative;
+    left: 187px;
+    bottom: 0;
+    top: -145px;
+    right: 0;
+}

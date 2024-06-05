@@ -1,4 +1,4 @@
-import { registrarInfo, obtenerInfo } from "./promesas.js"
+import { registrarInfo, obtenerInfo, actualizarInfo, eliminarInfo } from "./promesas.js"
 
 window.addEventListener("load", () => {
     document.getElementById("btnValidar").addEventListener("click", validar);
@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
     document.getElementById("btnContraste").addEventListener("click", activateClass);
     document.getElementById("btnValidar").addEventListener("click", registrar);
     mostrar();
+    document.getElementById("btnActualizar").addEventListener("click", actualizar);
+    // document.getElementById("btnEliminar").addEventListener("click", eliminar);
 })
 
 const registrar = ()=> {
@@ -50,12 +52,46 @@ const mostrar = () => {
             estructura += "<td>"+p.instagram+"</td>";
             estructura += "<td>"+p.rango+"</td>";
             estructura += "<td>"+p.mensaje+"</td>";
-            estructura += "<td><button id='UPD"+p.id+"'>Actualizar</button></td>";
-            estructura += "<td><button id='DEL"+p.id+"'>Eliminar</button></td>";
+            estructura += "<td><button type='button' id='UPD"+p.id+"'>Actualizar</button></td>";
+            estructura += "<td><button type='button' id='DEL"+p.id+"'>Eliminar</button></td>";
             estructura += "</tr>";
         });
         document.getElementById("botabla").innerHTML = estructura;
-    });
+        info.forEach((p)=> {
+            let elemento = document.getElementById("UPD"+p.id);
+            elemento.addEventListener('click', ()=> {
+                document.getElementById("UPDriotid").value = p.riotid;
+                document.getElementById("UPDtelefono").value = p.telefono;
+                document.getElementById("UPDinstagram").value = p.instagram;
+                document.getElementById("UPDrango").value = p.rango;
+                document.getElementById("UPDmensaje").value = p.mensaje;
+                document.getElementById("btnActualizar").value = p.id;
+                alert("Seleccionaste a:" + p.riotid)
+            });
+            // 1.- Recupero el botón eliminar de cada fila
+            // 2.- Agrego un listener tipo click
+            // 3.- Asigno el id del documento al botón eliminar del formulario
+            let elementoEliminar = document.getElementById("DEL"+p.id);
+            elementoEliminar.addEventListener('click', ()=> {
+                document.getElementById("btnEliminar").value = p.id;
+                document.getElementById("DELriotid").value = p.riotid;
+                document.getElementById("DELtelefono").value = p.telefono;
+                document.getElementById("DELinstagram").value = p.instagram;
+                document.getElementById("DELrango").value = p.rango;
+                document.getElementById("DELmensaje").value = p.mensaje;
+                document.getElementById("btnEliminar").value = p.id;
+                if (confirm("Vas a eliminar a:\n"+p.riotid)) {
+                    eliminarInfo(p.id).then(()=>{
+                        alert("Se eliminó con éxito");
+                        mostrar();
+                        limpiar_formulario();
+                    });
+                };
+            });
+        });
+    }).catch((e)=>{
+        console.log(e)
+    })
 }
 
 const actualizar = () => {
@@ -64,6 +100,29 @@ const actualizar = () => {
     let eInstagram = document.getElementById("UPDinstagram");
     let eRango = document.getElementById("UPDrango");
     let eMensaje = document.getElementById("UPDmensaje");
+
+    let vRiotid = eRiotid.value;
+    let vTelefono = eTelefono.value;
+    let vInstagram = eInstagram.value;
+    let vRango = eRango.value;
+    let vMensaje = eMensaje.value;
+
+    let objeto = {
+        riotid:vRiotid,
+        telefono:vTelefono,
+        instagram:vInstagram,
+        rango:vRango,
+        mensaje:vMensaje
+    }
+
+    let id = document.getElementById("btnActualizar").value;
+    actualizarInfo(objeto, id).then(()=> {
+        alert("Se actualizó correctamente")
+        mostrar();
+        limpiar_formulario();
+    }).catch((e)=>{
+        console.log(e)
+    });
 }
 
 

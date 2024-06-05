@@ -1,4 +1,4 @@
-import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { db } from "./firebase.js";
 
 export const registrarInfo = async(info) => {
@@ -21,7 +21,14 @@ export const obtenerInfo = async() =>{
 }
 
 export const actualizarInfo = async(info, id) => {
+  // console.log("aca")
+  // console.log(info)
+  // console.log(id)
   const ref = doc(db, "informacion", id);
   await updateDoc(ref, info);
 }
 
+export const eliminarInfo = async(id) => {
+  const ref = doc(db,"informacion", id);
+  await deleteDoc(ref)
+}
